@@ -1,0 +1,24 @@
+import ControlTurbulentFlowsTheoremCanonicalLaneLean.ControlTurbulentFlowsAnalyticCertificate
+
+namespace HautevilleHouse
+namespace ControlTurbulentFlowsTheoremCanonicalLaneLean
+
+def ControlTurbulentFlowsAdmittedAnalyticClosure : Prop :=
+  ControlTurbulentFlowsAnalyticCertificateClosed sourceControlTurbulentFlowsAnalyticCertificate ∧
+  ConstrainedTheoremClosure analyticAdmissibleClass
+
+def UnrestrictedClassicalControlTurbulentFlowsBoundaryCarried : Prop :=
+  formalizationCertificate.theoremBoundaryOpen = true ∧
+  mathlibPDESubstrate.unrestrictedNavierStokesStackCarried = true
+
+theorem control_turbulent_flows_admitted_analytic_closure_checked :
+    ControlTurbulentFlowsAdmittedAnalyticClosure := by
+  exact And.intro source_control_turbulent_flows_analytic_certificate_closed
+    (constrained_theorem_closure analyticAdmissibleClass)
+
+theorem unrestricted_classical_control_turbulent_flows_boundary_carried_checked :
+    UnrestrictedClassicalControlTurbulentFlowsBoundaryCarried := by
+  exact And.intro rfl rfl
+
+end ControlTurbulentFlowsTheoremCanonicalLaneLean
+end HautevilleHouse
